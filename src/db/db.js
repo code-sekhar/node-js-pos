@@ -1,4 +1,6 @@
 const mongose = require('mongoose');
+const bcrypt = require('bcryptjs');
+require('dotenv').config();
 const mongoURI = 'mongodb://localhost:27017/pos';
 const connectDB = async () => {
     try {
@@ -11,5 +13,4 @@ const connectDB = async () => {
         console.log(err);
     }
 }
-
 module.exports = connectDB;
